@@ -1,0 +1,55 @@
+\hypertarget{classcircular}{}\section{circular$<$ T $>$ Class Template Reference}
+\label{classcircular}\index{circular$<$ T $>$@{circular$<$ T $>$}}
+
+
+Implementação da classe Lista\+Cirular a qual utiliza do artíficio de herança para herdar atibutos e métodos da classe \textquotesingle{}\hyperlink{classListaLigada}{Lista\+Ligada}\textquotesingle{}.  
+
+
+
+
+{\ttfamily \#include $<$circular.\+h$>$}
+
+
+
+Inheritance diagram for circular$<$ T $>$\+:
+% FIG 0
+
+
+Collaboration diagram for circular$<$ T $>$\+:
+% FIG 1
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classcircular_a2109cd64f59adca8c8dd367b26d24c3a}{circular} ()\hypertarget{classcircular_a2109cd64f59adca8c8dd367b26d24c3a}{}\label{classcircular_a2109cd64f59adca8c8dd367b26d24c3a}
+
+\begin{DoxyCompactList}\small\item\em Construtor padrão não-\/parametrizado. \end{DoxyCompactList}\item 
+\hyperlink{classcircular_a5a56ab12c24627189befe04ab8741f7e}{$\sim$circular} ()\hypertarget{classcircular_a5a56ab12c24627189befe04ab8741f7e}{}\label{classcircular_a5a56ab12c24627189befe04ab8741f7e}
+
+\begin{DoxyCompactList}\small\item\em Destrutor padrão. \end{DoxyCompactList}\item 
+bool \hyperlink{classcircular_aa18b6a493a681c90eaabe7b5597514d9}{Insere\+No\+Inicio} (T \+\_\+value)\hypertarget{classcircular_aa18b6a493a681c90eaabe7b5597514d9}{}\label{classcircular_aa18b6a493a681c90eaabe7b5597514d9}
+
+\begin{DoxyCompactList}\small\item\em Implementação do método Insere\+No\+Inicio levando em conta que é uma Lista\+Circular. \end{DoxyCompactList}\item 
+bool \hyperlink{classcircular_a49afe6a8f71dbe8f21f671c2c9f522cb}{Insere\+No\+Final} (T \+\_\+value)\hypertarget{classcircular_a49afe6a8f71dbe8f21f671c2c9f522cb}{}\label{classcircular_a49afe6a8f71dbe8f21f671c2c9f522cb}
+
+\begin{DoxyCompactList}\small\item\em Implementação do método Insere\+No\+Final levando em conta que é uma Lista\+Circular. \end{DoxyCompactList}\item 
+bool \hyperlink{classcircular_a3b5c927d660a5089529f47df1195651b}{Remove\+No\+Inicio} ()\hypertarget{classcircular_a3b5c927d660a5089529f47df1195651b}{}\label{classcircular_a3b5c927d660a5089529f47df1195651b}
+
+\begin{DoxyCompactList}\small\item\em Implementação do método Remove\+No\+Inicio levando em conta que é uma Lista\+Circular. \end{DoxyCompactList}\item 
+bool \hyperlink{classcircular_a1d8e0afadcf7bd20de49d1d52441f0d5}{Remove\+No\+Final} ()\hypertarget{classcircular_a1d8e0afadcf7bd20de49d1d52441f0d5}{}\label{classcircular_a1d8e0afadcf7bd20de49d1d52441f0d5}
+
+\begin{DoxyCompactList}\small\item\em Implementação do método Remove\+No\+Final levando em conta que é uma Lista\+Circular. \end{DoxyCompactList}\item 
+bool \hyperlink{classcircular_a19f2b4d06f2fd26ecc81d841fe947fca}{is\+Empty} ()\hypertarget{classcircular_a19f2b4d06f2fd26ecc81d841fe947fca}{}\label{classcircular_a19f2b4d06f2fd26ecc81d841fe947fca}
+
+\begin{DoxyCompactList}\small\item\em Método Is\+Empty que retorna \textquotesingle{}true\textquotesingle{} se a lista estiver vazia ou \textquotesingle{}false\textquotesingle{} se não estiver. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$typename T$>$\\*
+class circular$<$ T $>$}
+
+Implementação da classe Lista\+Cirular a qual utiliza do artíficio de herança para herdar atibutos e métodos da classe \textquotesingle{}\hyperlink{classListaLigada}{Lista\+Ligada}\textquotesingle{}. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+circular.\+h\end{DoxyCompactItemize}

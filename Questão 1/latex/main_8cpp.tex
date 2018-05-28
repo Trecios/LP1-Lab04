@@ -1,0 +1,125 @@
+\hypertarget{main_8cpp}{\section{main.\-cpp File Reference}
+\label{main_8cpp}\index{main.\-cpp@{main.\-cpp}}
+}
+
+
+Programa para verificar se palavras são palíndromos com a ajuda do T\-A\-D \hyperlink{classPilha}{Pilha}.  
+
+
+{\ttfamily \#include $<$iostream$>$}\\*
+{\ttfamily \#include \char`\"{}pilha.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}lista.\-h\char`\"{}}\\*
+{\ttfamily \#include $<$algorithm$>$}\\*
+Include dependency graph for main.\-cpp\-:
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{main_8cpp_abf9e6b7e6f15df4b525a2e7705ba3089}{main} (int argc, char const $\ast$argv\mbox{[}$\,$\mbox{]})
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Programa para verificar se palavras são palíndromos com a ajuda do T\-A\-D \hyperlink{classPilha}{Pilha}. \begin{DoxyAuthor}{Author}
+Ailton Gabriel Figueira Dantas Ramos da Silva 
+
+Felipe Douglas Cavalcante Marinho de Vasconcelos 
+\end{DoxyAuthor}
+\begin{DoxySince}{Since}
+20/05/2018 
+\end{DoxySince}
+\begin{DoxyDate}{Date}
+25/05/2018 
+\end{DoxyDate}
+
+
+\subsection{Function Documentation}
+\hypertarget{main_8cpp_abf9e6b7e6f15df4b525a2e7705ba3089}{\index{main.\-cpp@{main.\-cpp}!main@{main}}
+\index{main@{main}!main.cpp@{main.\-cpp}}
+\subsubsection[{main}]{\setlength{\rightskip}{0pt plus 5cm}int main (
+\begin{DoxyParamCaption}
+\item[{int}]{argc, }
+\item[{char const $\ast$}]{argv\mbox{[}$\,$\mbox{]}}
+\end{DoxyParamCaption}
+)}}\label{main_8cpp_abf9e6b7e6f15df4b525a2e7705ba3089}
+Explicação\-: Primeiro, o usuário entra com sua string. Em seguida, é calculado o tamanho dessa string e caractere por caractere são empilhhados em uma pilha de 'char'. Com a ajuda de um contador, o primeiro até o último caractere da string é comparado com o topo até o final da pilha. Se este contador no final da iteração for igual ao tamanho da string, então a string é um palíndromo. 
+\begin{DoxyCode}
+28 \{
+29 \textcolor{comment}{/*}
+30 \textcolor{comment}{    Pilha<int> pilha;}
+31 \textcolor{comment}{    cout << "Tamanho: " << pilha.size() << endl;}
+32 \textcolor{comment}{    pilha.push(10);}
+33 \textcolor{comment}{    pilha.push(15);}
+34 \textcolor{comment}{    pilha.push(20);}
+35 \textcolor{comment}{    cout << pilha.top() << endl;}
+36 \textcolor{comment}{    pilha.pop();}
+37 \textcolor{comment}{    cout << "Tamanho: " << pilha.size() << endl;}
+38 \textcolor{comment}{    cout << pilha.top() << endl;}
+39 \textcolor{comment}{    pilha.pop();}
+40 \textcolor{comment}{    cout << pilha.top() << endl;}
+41 \textcolor{comment}{    pilha.pop();}
+42 \textcolor{comment}{}
+43 \textcolor{comment}{    cout << "Testando a lista..." << endl;}
+44 \textcolor{comment}{}
+45 \textcolor{comment}{    ListaLigada<int> lista1;}
+46 \textcolor{comment}{    cout << "Tamanho: " << lista1.size() << endl;}
+47 \textcolor{comment}{    lista1.InsereNoFinal(2);}
+48 \textcolor{comment}{    lista1.InsereNoFinal(3);}
+49 \textcolor{comment}{    lista1.InsereNoFinal(4);}
+50 \textcolor{comment}{    lista1.InsereNaPosicao(0,1);}
+51 \textcolor{comment}{    lista1.InsereNoFinal(6);}
+52 \textcolor{comment}{    lista1.InsereNaPosicao(4,5);}
+53 \textcolor{comment}{    lista1.InsereNoFinal(7);}
+54 \textcolor{comment}{    cout << "Tamanho: " << lista1.size() << endl;}
+55 \textcolor{comment}{    cout << lista1 << endl;}
+56 \textcolor{comment}{    lista1.RemoveNaPosicao(3);}
+57 \textcolor{comment}{    cout << "Tamanho: " << lista1.size() << endl;}
+58 \textcolor{comment}{    cout << lista1 << endl;}
+59 \textcolor{comment}{    lista1.RemoveNoInicio();}
+60 \textcolor{comment}{    cout << "Tamanho: " << lista1.size() << endl;}
+61 \textcolor{comment}{    cout << lista1 << endl;}
+62 \textcolor{comment}{    lista1.RemoveNoFinal();}
+63 \textcolor{comment}{    cout << "Tamanho: " << lista1.size() << endl;}
+64 \textcolor{comment}{    cout << lista1 << endl;}
+65 \textcolor{comment}{*/}
+66     cout << \textcolor{stringliteral}{"Entre com a string: "} << endl;
+67     \textcolor{keywordtype}{string} valor;
+68     getline(cin, valor);
+69     
+70     
+71     transform(valor.begin(), valor.end(), valor.begin(),::tolower);
+72 
+73     \textcolor{keywordtype}{int} contador = 0;
+74 
+75 
+76     \textcolor{keywordtype}{int} aux = valor.length();
+77 
+78     \hyperlink{classPilha}{Pilha<char>} stack;
+79 
+80     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i = 0; i < aux; i++)  
+81     \{
+82         stack.\hyperlink{classPilha_a3f80cb860cfa58f459d7f484c9045879}{push}(valor[i]);
+83     \}
+84 
+85     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i = 0; i < aux; i++)   
+86     \{
+87         \textcolor{keywordflow}{if}(valor[i] == stack.\hyperlink{classPilha_adb80016e40c990aa1074f879b1ef7b89}{top}())
+88         \{
+89             contador++;        
+90             stack.\hyperlink{classPilha_a720f99ec51a9d2e3ae2e59ab78365b84}{pop}();
+91         \}
+92         
+93 
+94     \}
+95 
+96     \textcolor{keywordflow}{if}(contador == aux)    
+97     \{
+98         cout << \textcolor{stringliteral}{"É palíndromo!"} << endl;
+99     \}
+100 
+101 
+102     \textcolor{keywordflow}{else}
+103     \{
+104         cout << \textcolor{stringliteral}{"Não é palíndromo!"} << endl;
+105     \}
+106 
+107 \}\end{DoxyCode}

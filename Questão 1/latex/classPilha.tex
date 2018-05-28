@@ -1,0 +1,156 @@
+\hypertarget{classPilha}{\section{Pilha$<$ T $>$ Class Template Reference}
+\label{classPilha}\index{Pilha$<$ T $>$@{Pilha$<$ T $>$}}
+}
+
+
+{\ttfamily \#include $<$pilha.\-h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classPilha_a3113638095289f155d7c76db4b2da3df}{Pilha} (int n\-\_\-capacidade=50)
+\begin{DoxyCompactList}\small\item\em Qtde Max de elementos. \end{DoxyCompactList}\item 
+\hyperlink{classPilha_a0c931f49acc17ce09b29c2d589d4fd0b}{$\sim$\-Pilha} ()
+\item 
+bool \hyperlink{classPilha_a117c819eb1bff51136b7c72b486df0fc}{empty} ()
+\item 
+bool \hyperlink{classPilha_ae9204010a17accede9ebd6e92c084c15}{full} ()
+\item 
+T \& \hyperlink{classPilha_adb80016e40c990aa1074f879b1ef7b89}{top} ()
+\item 
+int \hyperlink{classPilha_a3f80cb860cfa58f459d7f484c9045879}{push} (T novo)
+\item 
+int \hyperlink{classPilha_a720f99ec51a9d2e3ae2e59ab78365b84}{pop} ()
+\item 
+int \hyperlink{classPilha_aae0f3f465788cefc53f9cadadc0e1fe0}{size} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classPilha_a3113638095289f155d7c76db4b2da3df}{\index{Pilha@{Pilha}!Pilha@{Pilha}}
+\index{Pilha@{Pilha}!Pilha@{Pilha}}
+\subsubsection[{Pilha}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ {\bf Pilha}$<$ T $>$\-::{\bf Pilha} (
+\begin{DoxyParamCaption}
+\item[{int}]{n\-\_\-capacidade = {\ttfamily 50}}
+\end{DoxyParamCaption}
+)}}\label{classPilha_a3113638095289f155d7c76db4b2da3df}
+
+
+Qtde Max de elementos. 
+
+Construtor parametrizado que inicializa a pilha com um tamanho passado. 
+\begin{DoxyCode}
+25                                 : m\_tamanho(0), m\_capacidade(n\_capacidade)  
+26 \{
+27     m\_elementos = \textcolor{keyword}{new} T[n\_capacidade];
+28 \}
+\end{DoxyCode}
+\hypertarget{classPilha_a0c931f49acc17ce09b29c2d589d4fd0b}{\index{Pilha@{Pilha}!$\sim$\-Pilha@{$\sim$\-Pilha}}
+\index{$\sim$\-Pilha@{$\sim$\-Pilha}!Pilha@{Pilha}}
+\subsubsection[{$\sim$\-Pilha}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ {\bf Pilha}$<$ T $>$\-::$\sim${\bf Pilha} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classPilha_a0c931f49acc17ce09b29c2d589d4fd0b}
+
+\begin{DoxyCode}
+32 \{
+33     \textcolor{keyword}{delete} [] m\_elementos;
+34 \}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classPilha_a117c819eb1bff51136b7c72b486df0fc}{\index{Pilha@{Pilha}!empty@{empty}}
+\index{empty@{empty}!Pilha@{Pilha}}
+\subsubsection[{empty}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ bool {\bf Pilha}$<$ T $>$\-::empty (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classPilha_a117c819eb1bff51136b7c72b486df0fc}
+
+\begin{DoxyCode}
+38 \{
+39     \textcolor{keywordflow}{return} m\_tamanho == 0;
+40 \}
+\end{DoxyCode}
+\hypertarget{classPilha_ae9204010a17accede9ebd6e92c084c15}{\index{Pilha@{Pilha}!full@{full}}
+\index{full@{full}!Pilha@{Pilha}}
+\subsubsection[{full}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ bool {\bf Pilha}$<$ T $>$\-::full (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classPilha_ae9204010a17accede9ebd6e92c084c15}
+
+\begin{DoxyCode}
+44 \{
+45     \textcolor{keywordflow}{return} m\_tamanho == m\_capacidade;
+46 \}
+\end{DoxyCode}
+\hypertarget{classPilha_a720f99ec51a9d2e3ae2e59ab78365b84}{\index{Pilha@{Pilha}!pop@{pop}}
+\index{pop@{pop}!Pilha@{Pilha}}
+\subsubsection[{pop}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ int {\bf Pilha}$<$ T $>$\-::pop (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classPilha_a720f99ec51a9d2e3ae2e59ab78365b84}
+
+\begin{DoxyCode}
+59 \{
+60     \textcolor{keywordflow}{if} (\hyperlink{classPilha_a117c819eb1bff51136b7c72b486df0fc}{empty}())
+61         \textcolor{keywordflow}{return} 0;
+62     m\_tamanho--; 
+63     \textcolor{keywordflow}{return} 1;
+64 \}
+\end{DoxyCode}
+\hypertarget{classPilha_a3f80cb860cfa58f459d7f484c9045879}{\index{Pilha@{Pilha}!push@{push}}
+\index{push@{push}!Pilha@{Pilha}}
+\subsubsection[{push}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ int {\bf Pilha}$<$ T $>$\-::push (
+\begin{DoxyParamCaption}
+\item[{T}]{novo}
+\end{DoxyParamCaption}
+)}}\label{classPilha_a3f80cb860cfa58f459d7f484c9045879}
+
+\begin{DoxyCode}
+50 \{
+51     \textcolor{keywordflow}{if} (\hyperlink{classPilha_ae9204010a17accede9ebd6e92c084c15}{full}())
+52         \textcolor{keywordflow}{return} 0;
+53     m\_elementos[m\_tamanho++] = novo;
+54     \textcolor{keywordflow}{return} 1;
+55 \}
+\end{DoxyCode}
+\hypertarget{classPilha_aae0f3f465788cefc53f9cadadc0e1fe0}{\index{Pilha@{Pilha}!size@{size}}
+\index{size@{size}!Pilha@{Pilha}}
+\subsubsection[{size}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ int {\bf Pilha}$<$ T $>$\-::size (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classPilha_aae0f3f465788cefc53f9cadadc0e1fe0}
+
+\begin{DoxyCode}
+78 \{
+79     \textcolor{keywordflow}{return} m\_tamanho;
+80 \}
+\end{DoxyCode}
+\hypertarget{classPilha_adb80016e40c990aa1074f879b1ef7b89}{\index{Pilha@{Pilha}!top@{top}}
+\index{top@{top}!Pilha@{Pilha}}
+\subsubsection[{top}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ T \& {\bf Pilha}$<$ T $>$\-::top (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classPilha_adb80016e40c990aa1074f879b1ef7b89}
+
+\begin{DoxyCode}
+68 \{   
+69     \textcolor{keywordflow}{if} (\hyperlink{classPilha_a117c819eb1bff51136b7c72b486df0fc}{empty}()) \{
+70         std::cerr << \textcolor{stringliteral}{"Acesso invalido a elemento no topo. O programa sera fechado!"} << std::endl;
+71         exit(EXIT\_FAILURE);
+72     \}
+73     \textcolor{keywordflow}{return} m\_elementos[m\_tamanho-1];
+74 \}
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{pilha_8h}{pilha.\-h}\end{DoxyCompactItemize}

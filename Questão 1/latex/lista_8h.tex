@@ -1,0 +1,61 @@
+\hypertarget{lista_8h}{\section{lista.\-h File Reference}
+\label{lista_8h}\index{lista.\-h@{lista.\-h}}
+}
+{\ttfamily \#include $<$iostream$>$}\\*
+{\ttfamily \#include $<$memory$>$}\\*
+Include dependency graph for lista.\-h\-:
+This graph shows which files directly or indirectly include this file\-:
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classNode}{Node$<$ T $>$}
+\item 
+class \hyperlink{classNode}{Node$<$ T $>$}
+\item 
+class \hyperlink{classListaLigada}{Lista\-Ligada$<$ T $>$}
+\item 
+class \hyperlink{classListaLigada}{Lista\-Ligada$<$ T $>$}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename T $>$ }\\std\-::ostream \& \hyperlink{lista_8h_aa0b9bf5be3a02ea1084444540e90a13c}{operator$<$$<$} (std\-::ostream \&, \hyperlink{classNode}{Node}$<$ T $>$ const \&)
+\item 
+{\footnotesize template$<$typename T $>$ }\\std\-::ostream \& \hyperlink{lista_8h_a14973d9507eaf00fd788d679db182526}{operator$<$$<$} (std\-::ostream \&, \hyperlink{classListaLigada}{Lista\-Ligada}$<$ T $>$ const \&)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{lista_8h_aa0b9bf5be3a02ea1084444540e90a13c}{\index{lista.\-h@{lista.\-h}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!lista.h@{lista.\-h}}
+\subsubsection[{operator$<$$<$}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ std\-::ostream \& operator$<$$<$ (
+\begin{DoxyParamCaption}
+\item[{std\-::ostream \&}]{o, }
+\item[{{\bf Node}$<$ T $>$ const \&}]{n}
+\end{DoxyParamCaption}
+)}}\label{lista_8h_aa0b9bf5be3a02ea1084444540e90a13c}
+
+\begin{DoxyCode}
+64                                                          \{
+65     o << n.valor;
+66     \textcolor{keywordflow}{return} o;
+67 \}
+\end{DoxyCode}
+\hypertarget{lista_8h_a14973d9507eaf00fd788d679db182526}{\index{lista.\-h@{lista.\-h}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!lista.h@{lista.\-h}}
+\subsubsection[{operator$<$$<$}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ std\-::ostream \& operator$<$$<$ (
+\begin{DoxyParamCaption}
+\item[{std\-::ostream \&}]{o, }
+\item[{{\bf Lista\-Ligada}$<$ T $>$ const \&}]{l}
+\end{DoxyParamCaption}
+)}}\label{lista_8h_a14973d9507eaf00fd788d679db182526}
+
+\begin{DoxyCode}
+212                                                                  \{
+213     \textcolor{keyword}{auto} atual = l.cabeca;
+214     \textcolor{keywordflow}{while} (atual != l.cauda) \{
+215         o << atual->getValor() << \textcolor{stringliteral}{" "};
+216         atual = atual->getNext();
+217     \}
+218     \textcolor{keywordflow}{return} o;
+219 \}\end{DoxyCode}

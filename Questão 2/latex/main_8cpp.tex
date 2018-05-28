@@ -1,0 +1,162 @@
+\hypertarget{main_8cpp}{\section{main.\-cpp File Reference}
+\label{main_8cpp}\index{main.\-cpp@{main.\-cpp}}
+}
+
+
+Programa para cálculo de expressões pós-\/fixas com ajuda do T\-A\-D Pilhas.  
+
+
+{\ttfamily \#include $<$iostream$>$}\\*
+{\ttfamily \#include \char`\"{}pilha.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}lista.\-h\char`\"{}}\\*
+{\ttfamily \#include $<$algorithm$>$}\\*
+Include dependency graph for main.\-cpp\-:
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{main_8cpp_abf9e6b7e6f15df4b525a2e7705ba3089}{main} (int argc, char const $\ast$argv\mbox{[}$\,$\mbox{]})
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Programa para cálculo de expressões pós-\/fixas com ajuda do T\-A\-D Pilhas. \begin{DoxyAuthor}{Author}
+Ailton Gabriel Figueira Dantas Ramos da Silva 
+
+Felipe Douglas Cavalcante Marinho de Vasconcelos 
+\end{DoxyAuthor}
+\begin{DoxySince}{Since}
+20/05/2018 
+\end{DoxySince}
+\begin{DoxyDate}{Date}
+25/05/2018 
+\end{DoxyDate}
+
+
+\subsection{Function Documentation}
+\hypertarget{main_8cpp_abf9e6b7e6f15df4b525a2e7705ba3089}{\index{main.\-cpp@{main.\-cpp}!main@{main}}
+\index{main@{main}!main.cpp@{main.\-cpp}}
+\subsubsection[{main}]{\setlength{\rightskip}{0pt plus 5cm}int main (
+\begin{DoxyParamCaption}
+\item[{int}]{argc, }
+\item[{char const $\ast$}]{argv\mbox{[}$\,$\mbox{]}}
+\end{DoxyParamCaption}
+)}}\label{main_8cpp_abf9e6b7e6f15df4b525a2e7705ba3089}
+Explicação\-: Primeiro o usuário entra com sua respectiva expressão pós-\/fixa. Em seguida, é atribuído a uma variável inteira o tamanho da string entrrada. Depois, utilizando os artifícios da T\-A\-D \hyperlink{classPilha}{Pilha}, operando por operando é empilhado e desimpilhado fazendo as respectivas operações até que o topo da \hyperlink{classPilha}{Pilha} tenha o resultado final da expressão. No qual, o mesmo é atribuído a uma string e impresso na tela. 
+\begin{DoxyCode}
+26 \{
+27 \textcolor{comment}{/*}
+28 \textcolor{comment}{    Pilha<int> pilha;}
+29 \textcolor{comment}{    cout << "Tamanho: " << pilha.size() << endl;}
+30 \textcolor{comment}{    pilha.push(10);}
+31 \textcolor{comment}{    pilha.push(15);}
+32 \textcolor{comment}{    pilha.push(20);}
+33 \textcolor{comment}{    cout << pilha.top() << endl;}
+34 \textcolor{comment}{    pilha.pop();}
+35 \textcolor{comment}{    cout << "Tamanho: " << pilha.size() << endl;}
+36 \textcolor{comment}{    cout << pilha.top() << endl;}
+37 \textcolor{comment}{    pilha.pop();}
+38 \textcolor{comment}{    cout << pilha.top() << endl;}
+39 \textcolor{comment}{    pilha.pop();}
+40 \textcolor{comment}{}
+41 \textcolor{comment}{    cout << "Testando a lista..." << endl;}
+42 \textcolor{comment}{}
+43 \textcolor{comment}{    ListaLigada<int> lista1;}
+44 \textcolor{comment}{    cout << "Tamanho: " << lista1.size() << endl;}
+45 \textcolor{comment}{    lista1.InsereNoFinal(2);}
+46 \textcolor{comment}{    lista1.InsereNoFinal(3);}
+47 \textcolor{comment}{    lista1.InsereNoFinal(4);}
+48 \textcolor{comment}{    lista1.InsereNaPosicao(0,1);}
+49 \textcolor{comment}{    lista1.InsereNoFinal(6);}
+50 \textcolor{comment}{    lista1.InsereNaPosicao(4,5);}
+51 \textcolor{comment}{    lista1.InsereNoFinal(7);}
+52 \textcolor{comment}{    cout << "Tamanho: " << lista1.size() << endl;}
+53 \textcolor{comment}{    cout << lista1 << endl;}
+54 \textcolor{comment}{    lista1.RemoveNaPosicao(3);}
+55 \textcolor{comment}{    cout << "Tamanho: " << lista1.size() << endl;}
+56 \textcolor{comment}{    cout << lista1 << endl;}
+57 \textcolor{comment}{    lista1.RemoveNoInicio();}
+58 \textcolor{comment}{    cout << "Tamanho: " << lista1.size() << endl;}
+59 \textcolor{comment}{    cout << lista1 << endl;}
+60 \textcolor{comment}{    lista1.RemoveNoFinal();}
+61 \textcolor{comment}{    cout << "Tamanho: " << lista1.size() << endl;}
+62 \textcolor{comment}{    cout << lista1 << endl;}
+63 \textcolor{comment}{*/}
+64     cout << \textcolor{stringliteral}{"Entre com a expressão: "} << endl;
+65     cout << \textcolor{stringliteral}{"Obs.:Sempre utilize espaço entre números e operandos."} << endl;
+66     \textcolor{keywordtype}{string} teste;
+67     getline(cin, teste);
+68 
+69     \textcolor{keywordtype}{string} conc = \textcolor{stringliteral}{""};
+70 
+71 
+72 
+73     \textcolor{keywordtype}{int} aux = teste.length();
+74 
+75     
+76 
+77 
+78 
+79     \hyperlink{classPilha}{Pilha<int>} stack;
+80     
+81     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i = 0; i < aux; i++)
+82     \{
+83 
+84             \textcolor{keywordflow}{if}(teste[i] == \textcolor{charliteral}{'+'} || teste[i] == \textcolor{charliteral}{'-'} || teste[i] == \textcolor{charliteral}{'/'} || teste[i] == \textcolor{charliteral}{'*'})
+85             \{
+86                 \textcolor{keywordtype}{int} b = stack.\hyperlink{classPilha_adb80016e40c990aa1074f879b1ef7b89}{top}();
+87                 stack.\hyperlink{classPilha_a720f99ec51a9d2e3ae2e59ab78365b84}{pop}();
+88                 \textcolor{keywordtype}{int} a = stack.\hyperlink{classPilha_adb80016e40c990aa1074f879b1ef7b89}{top}();
+89                 stack.\hyperlink{classPilha_a720f99ec51a9d2e3ae2e59ab78365b84}{pop}();
+90 
+91                 \textcolor{keywordflow}{if}(teste[i] == \textcolor{charliteral}{'+'})
+92                 \{
+93                     stack.\hyperlink{classPilha_a3f80cb860cfa58f459d7f484c9045879}{push}(a+b);
+94                 \}
+95 
+96                 \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(teste[i] == \textcolor{charliteral}{'-'})
+97                 \{
+98                     stack.\hyperlink{classPilha_a3f80cb860cfa58f459d7f484c9045879}{push}(a-b);
+99                 \}
+100 
+101                 \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(teste[i] == \textcolor{charliteral}{'/'})
+102                 \{
+103                     stack.\hyperlink{classPilha_a3f80cb860cfa58f459d7f484c9045879}{push}(a/b);
+104                 \}
+105 
+106                 \textcolor{keywordflow}{else}
+107                 \{
+108                     stack.\hyperlink{classPilha_a3f80cb860cfa58f459d7f484c9045879}{push}(a*b);
+109                 \}
+110 
+111             \}
+112 
+113 
+114             \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(teste[i] != \textcolor{charliteral}{' '})
+115             \{    
+116                 conc += teste[i];
+117             \}
+118 
+119             \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(teste[i] == \textcolor{charliteral}{' '} && conc != \textcolor{stringliteral}{""})
+120             \{
+121                 \textcolor{keywordtype}{int} valor = stoi(conc);
+122                 stack.\hyperlink{classPilha_a3f80cb860cfa58f459d7f484c9045879}{push}(valor);
+123                 conc = \textcolor{stringliteral}{""};
+124             \}
+125 
+126 
+127             
+128     
+129     \}
+130 
+131 
+132 
+133     
+134 
+135 
+136     \textcolor{keywordtype}{int} result = stack.\hyperlink{classPilha_adb80016e40c990aa1074f879b1ef7b89}{top}();
+137     cout << \textcolor{stringliteral}{"Resultado: "} << result << endl;
+138 
+139     \textcolor{keywordflow}{return} 0;
+140     
+141 
+142 \}\end{DoxyCode}

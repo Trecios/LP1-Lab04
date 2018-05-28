@@ -1,0 +1,133 @@
+\hypertarget{classNode}{\section{Node$<$ T $>$ Class Template Reference}
+\label{classNode}\index{Node$<$ T $>$@{Node$<$ T $>$}}
+}
+
+
+{\ttfamily \#include $<$lista.\-h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classNode_a0ac1d44cfe588be564acf25485029bd8}{Node} ()
+\item 
+\hyperlink{classNode_ae00c7c803c5b2fea3b2270050da4a9db}{Node} (T \-\_\-valor)
+\item 
+\hyperlink{classNode_ae923d0417581dd19784d55b901f0f7f0}{$\sim$\-Node} ()
+\item 
+\hyperlink{classNode_af67f09d322ec9a1fc2852ff98f0a4558}{Node} (T num, shared\-\_\-ptr$<$ \hyperlink{classNode}{Node} $>$ next\-Ptr)
+\item 
+T \hyperlink{classNode_aac9fa54166ff3aa269de6da8f9484f66}{get\-Valor} ()
+\item 
+shared\-\_\-ptr$<$ \hyperlink{classNode}{Node}$<$ T $>$ $>$ \hyperlink{classNode_a85f16577c580d8fdc246f350c5a6141a}{get\-Next} ()
+\item 
+void \hyperlink{classNode_a73ec6e581244130c98a26ed2935cf472}{set\-Next} (shared\-\_\-ptr$<$ \hyperlink{classNode}{Node}$<$ T $>$$>$ next\-Ptr)
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+std\-::ostream \& \hyperlink{classNode_af4dd23ddeacb247749f1f4fc7e22d96f}{operator} (std\-::ostream \&o, \hyperlink{classNode}{Node}$<$ T $>$ const \&n)
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classNode_a0ac1d44cfe588be564acf25485029bd8}{\index{Node@{Node}!Node@{Node}}
+\index{Node@{Node}!Node@{Node}}
+\subsubsection[{Node}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ {\bf Node}$<$ T $>$\-::{\bf Node} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classNode_a0ac1d44cfe588be564acf25485029bd8}
+
+\begin{DoxyCode}
+35 : valor(), proximo(\textcolor{keyword}{nullptr}) \{\}
+\end{DoxyCode}
+\hypertarget{classNode_ae00c7c803c5b2fea3b2270050da4a9db}{\index{Node@{Node}!Node@{Node}}
+\index{Node@{Node}!Node@{Node}}
+\subsubsection[{Node}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ {\bf Node}$<$ T $>$\-::{\bf Node} (
+\begin{DoxyParamCaption}
+\item[{T}]{\-\_\-valor}
+\end{DoxyParamCaption}
+)}}\label{classNode_ae00c7c803c5b2fea3b2270050da4a9db}
+
+\begin{DoxyCode}
+38 : valor(\_valor), proximo(\textcolor{keyword}{nullptr}) \{\}
+\end{DoxyCode}
+\hypertarget{classNode_ae923d0417581dd19784d55b901f0f7f0}{\index{Node@{Node}!$\sim$\-Node@{$\sim$\-Node}}
+\index{$\sim$\-Node@{$\sim$\-Node}!Node@{Node}}
+\subsubsection[{$\sim$\-Node}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ {\bf Node}$<$ T $>$\-::$\sim${\bf Node} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classNode_ae923d0417581dd19784d55b901f0f7f0}
+
+\begin{DoxyCode}
+41                \{
+42     cout << \textcolor{stringliteral}{"Node("} << valor << \textcolor{stringliteral}{") removido."} << endl;
+43 \}
+\end{DoxyCode}
+\hypertarget{classNode_af67f09d322ec9a1fc2852ff98f0a4558}{\index{Node@{Node}!Node@{Node}}
+\index{Node@{Node}!Node@{Node}}
+\subsubsection[{Node}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ {\bf Node}$<$ T $>$\-::{\bf Node} (
+\begin{DoxyParamCaption}
+\item[{T}]{num, }
+\item[{shared\-\_\-ptr$<$ {\bf Node}$<$ T $>$ $>$}]{next\-Ptr}
+\end{DoxyParamCaption}
+)}}\label{classNode_af67f09d322ec9a1fc2852ff98f0a4558}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classNode_a85f16577c580d8fdc246f350c5a6141a}{\index{Node@{Node}!get\-Next@{get\-Next}}
+\index{get\-Next@{get\-Next}!Node@{Node}}
+\subsubsection[{get\-Next}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ shared\-\_\-ptr$<$ {\bf Node}$<$ T $>$ $>$ {\bf Node}$<$ T $>$\-::get\-Next (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classNode_a85f16577c580d8fdc246f350c5a6141a}
+
+\begin{DoxyCode}
+54                                      \{
+55     \textcolor{keywordflow}{return} proximo;
+56 \}
+\end{DoxyCode}
+\hypertarget{classNode_aac9fa54166ff3aa269de6da8f9484f66}{\index{Node@{Node}!get\-Valor@{get\-Valor}}
+\index{get\-Valor@{get\-Valor}!Node@{Node}}
+\subsubsection[{get\-Valor}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ T {\bf Node}$<$ T $>$\-::get\-Valor (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classNode_aac9fa54166ff3aa269de6da8f9484f66}
+
+\begin{DoxyCode}
+49                     \{
+50     \textcolor{keywordflow}{return} valor;
+51 \}
+\end{DoxyCode}
+\hypertarget{classNode_a73ec6e581244130c98a26ed2935cf472}{\index{Node@{Node}!set\-Next@{set\-Next}}
+\index{set\-Next@{set\-Next}!Node@{Node}}
+\subsubsection[{set\-Next}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ void {\bf Node}$<$ T $>$\-::set\-Next (
+\begin{DoxyParamCaption}
+\item[{shared\-\_\-ptr$<$ {\bf Node}$<$ T $>$$>$}]{next\-Ptr}
+\end{DoxyParamCaption}
+)}}\label{classNode_a73ec6e581244130c98a26ed2935cf472}
+
+\begin{DoxyCode}
+59                                                  \{
+60     proximo = nextPtr;
+61 \}
+\end{DoxyCode}
+
+
+\subsection{Friends And Related Function Documentation}
+\hypertarget{classNode_af4dd23ddeacb247749f1f4fc7e22d96f}{\index{Node@{Node}!operator@{operator}}
+\index{operator@{operator}!Node@{Node}}
+\subsubsection[{operator}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ std\-::ostream\& operator (
+\begin{DoxyParamCaption}
+\item[{std\-::ostream \&}]{o, }
+\item[{{\bf Node}$<$ T $>$ const \&}]{n}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [friend]}}}\label{classNode_af4dd23ddeacb247749f1f4fc7e22d96f}
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{lista_8h}{lista.\-h}\end{DoxyCompactItemize}

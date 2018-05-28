@@ -6,7 +6,7 @@ Felipe Douglas Cavalcante Marinho de Vasconcelos
 Professor: Silvio Costa Sampaio
 
 # Para compilar:
-cd Questão1 || cd Questão2 || cd Questão3;
-make;
-cd bin;
-./executável;
+cd Questão1 || cd Questão2 || cd Questão3 
+make 
+cd bin 
+./executável

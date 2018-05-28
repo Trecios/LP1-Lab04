@@ -12,4 +12,4 @@ make
 
 cd bin 
 
-./executável
+./nome do executável
